@@ -1,0 +1,131 @@
+/* Main container for the entire component */
+.prisoner-details-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px;
+  background-color: #f4f7f6;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  min-height: 100vh;
+}
+
+/* The white box holding the content */
+.details-box {
+  background-color: #ffffff;
+  padding: 30px 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 800px;
+}
+
+/* Title styling */
+.details-title {
+  text-align: center;
+  color: #333;
+  margin-bottom: 30px;
+  font-size: 28px;
+  font-weight: 600;
+  border-bottom: 2px solid #e0e0e0;
+  padding-bottom: 15px;
+}
+
+/* Grid layout for details and form fields */
+.details-table {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* Label column and value column */
+  gap: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+
+.details-table strong {
+  color: #555;
+  font-weight: 600;
+}
+
+/* Styling for form inputs and textarea */
+.details-form input[type="text"],
+.details-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.details-form input[type="text"]:focus,
+.details-form textarea:focus {
+  outline: none;
+  border-color: #000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.12);
+}
+
+/* --- Button Alignment and Styling --- */
+
+/* This is the container for the buttons */
+.button-group {
+  display: flex; /* Key property to align items in a row */
+  justify-content: flex-end; /* Aligns buttons to the right */
+  gap: 15px; /* Adds space between the buttons */
+  margin-top: 20px;
+  padding-top: 20px;
+  border-top: 1px solid #e0e0e0;
+}
+
+/* Base style for all buttons in the group */
+.button-group button {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+/* Primary Action Button Style (Update / Save) */
+.edit-button,
+.save-button {
+  background-color: #111;
+}
+
+.edit-button:hover,
+.save-button:hover {
+  background-color: #2a2a2a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Secondary Action Button Style (Check Risk) */
+.check-button {
+  background-color: #000;
+}
+
+.check-button:hover {
+  background-color: #272727;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Cancel Button Style */
+.cancel-button {
+  background-color: #6c757d; /* Grey for cancel/secondary actions */
+}
+
+.cancel-button:hover {
+  background-color: #5a6268; /* Darker grey on hover */
+}
+
+/* Error message styling */
+.error-message {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+  padding: 15px;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  text-align: center;
+}

@@ -1,0 +1,53 @@
+.bail-result {
+    margin-top: 20px;
+    padding: 10px;
+    border-top: 1px solid #ddd;
+  }
+  
+  .bail-result h3 {
+    margin-bottom: 10px;
+  }
+  
+  .result {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .result.bailable {
+    color: green;
+  }
+  
+  .result.nonbailable {
+    color: red;
+  }
+  
+  .error-message {
+    color: red;
+    margin-top: 10px;
+  }
+
+  .prisoner-details-container .check-button {
+    display: inline-block;
+    margin-top: 14px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid #007bff;
+    background-color: #007bff;
+    color: #ffffff;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .prisoner-details-container .check-button:hover:not(:disabled) {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-1px);
+  }
+
+  .prisoner-details-container .check-button:disabled {
+    background-color: #4a4a4a;
+    border-color: #4a4a4a;
+    cursor: not-allowed;
+  }
+  

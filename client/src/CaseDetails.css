@@ -1,0 +1,123 @@
+/* 📌 Full-Screen Styling */
+.case-details-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    background: #0d0d0d; /* Darker black for a modern look */
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 📌 Case Details Box */
+.case-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: rgba(25, 25, 25, 0.85);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.1);
+    width: 65%;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease-in-out forwards;
+}
+
+/* 📌 Title */
+.case-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 25px;
+    text-transform: uppercase;
+    color: #ffcc00;
+    letter-spacing: 2px;
+    border-bottom: 2px solid #444;
+    padding-bottom: 12px;
+}
+
+/* 📌 Table Layout for Alignment */
+.case-table {
+    display: grid;
+    grid-template-columns: 1fr 2fr; /* Left = Label, Right = Data */
+    gap: 20px;
+    text-align: left;
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+/* 📌 Headings */
+.case-table strong {
+    font-weight: bold;
+    color: #ffcc00; /* Golden Yellow for contrast */
+    text-transform: uppercase;
+}
+
+/* 📌 Data Styling */
+.case-table span {
+    color: #ffffff;
+    font-weight: 500;
+    text-align: left;
+}
+
+/* 📌 Case Details Description */
+.case-description {
+    margin-top: 30px;
+    text-align: left;
+    padding: 20px;
+    background: rgba(35, 35, 35, 0.9);
+    border-radius: 10px;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    border-left: 4px solid #ffcc00;
+}
+
+/* 📌 Proceed Button */
+.proceed-button {
+    width: 100%;
+    padding: 15px;
+    background: #1f1f1f;
+    border: 2px solid #9220fd;
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-top: 30px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.proceed-button:hover {
+    background: #111;
+    transform: scale(1.05);
+}
+
+/* 📌 Animations */
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📌 Responsive Design */
+@media (max-width: 768px) {
+    .case-box {
+        width: 90%;
+        padding: 30px;
+    }
+    .case-table {
+        grid-template-columns: 1fr; /* Single-column layout for mobile */
+        font-size: 1.2rem;
+    }
+    .case-description {
+        font-size: 1.2rem;
+    }
+    .proceed-button {
+        font-size: 1.3rem;
+    }
+}

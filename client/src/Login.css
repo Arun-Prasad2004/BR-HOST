@@ -1,0 +1,163 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+.login-shell {
+  position: relative;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  color: #fff;
+  overflow: hidden;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.login-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.14), transparent 34%),
+    radial-gradient(circle at 83% 72%, rgba(255, 255, 255, 0.09), transparent 32%),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.04) 0,
+      rgba(255, 255, 255, 0.04) 1px,
+      transparent 1px,
+      transparent 48px
+    ),
+    #040404;
+  z-index: 0;
+}
+
+.hero-panel,
+.login-panel {
+  position: relative;
+  z-index: 1;
+  padding: 4rem 3.6rem;
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity 550ms ease, transform 550ms ease;
+}
+
+.hero-panel.is-ready,
+.login-panel.is-ready {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.hero-panel {
+  border-right: 1px solid rgba(255, 255, 255, 0.14);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.brand-logo {
+  width: min(300px, 72%);
+  object-fit: contain;
+  filter: drop-shadow(0 16px 35px rgba(0, 0, 0, 0.45));
+}
+
+.brand-title {
+  margin: 1.2rem 0 0;
+  font-size: clamp(2rem, 4.2vw, 3.6rem);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.brand-copy {
+  margin-top: 1rem;
+  max-width: 48ch;
+  color: #d2d2d2;
+  line-height: 1.7;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.login-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(1px);
+}
+
+.panel-title {
+  margin: 0;
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.panel-subtitle {
+  margin: 0.6rem 0 2.2rem;
+  color: #bbbbbb;
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.role-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.role-card {
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  border-radius: 18px;
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.01));
+  color: #fff;
+  min-height: 154px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  cursor: pointer;
+  transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
+}
+
+.role-card:hover,
+.role-card:focus-visible {
+  transform: translateY(-5px);
+  border-color: #fff;
+  box-shadow: 0 16px 28px rgba(0, 0, 0, 0.45);
+  outline: none;
+}
+
+.role-icon {
+  width: 54px;
+  height: 54px;
+  object-fit: contain;
+  filter: grayscale(1) brightness(2.5);
+}
+
+.role-name {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .login-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-panel {
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    padding-bottom: 2.2rem;
+  }
+
+  .login-panel {
+    padding-top: 2.4rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .hero-panel,
+  .login-panel {
+    padding: 2rem 1.2rem;
+  }
+
+  .role-grid {
+    grid-template-columns: 1fr;
+  }
+}

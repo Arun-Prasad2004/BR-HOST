@@ -1,0 +1,95 @@
+/* Full-screen container with a black theme and centered content */
+.prisoner-details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 200vh;
+  background-color: #000000;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+  padding: 2rem 1rem;
+  box-sizing: border-box;
+}
+
+/* The main card for the assessment form */
+.details-box {
+  background-color: #1a1a1a;
+  padding: 2.5rem;
+  border-radius: 16px;
+  border: 1px solid #333;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 600px; /* Increased width for better form layout */
+}
+
+/* "Bail Assessment Form" title styling */
+.details-box h3 {
+  margin-bottom: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #ffffff;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+/* Form container */
+.bail-factor-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Space between each question */
+}
+
+/* Styling for each question's label */
+.bail-factor-form label {
+  display: flex;
+  flex-direction: column;
+  font-size: 1rem;
+  color: #e0e0e0;
+  font-weight: 500;
+}
+
+/* Styling for the select dropdowns */
+.bail-factor-form select {
+  margin-top: 0.5rem;
+  padding: 12px;
+  font-size: 1rem;
+  background-color: #333;
+  border: 1px solid #555;
+  border-radius: 8px;
+  color: #fff;
+  cursor: pointer;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.bail-factor-form select:focus {
+  outline: none;
+  border-color: #fff;
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+/* Styling for the submit button */
+.bail-factor-form button {
+  margin-top: 1rem;
+  padding: 14px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  background-color: #fff;
+  color: white;
+  color: #000;
+  border: 1px solid #fff;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.bail-factor-form button:hover:not(:disabled) {
+  background-color: #dddddd;
+  transform: translateY(-2px);
+}
+
+.bail-factor-form button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}

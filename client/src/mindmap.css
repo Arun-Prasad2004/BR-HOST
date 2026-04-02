@@ -1,0 +1,237 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&display=swap");
+
+.mindmap-app-layout {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.control-panel {
+  width: min(420px, 94vw);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  padding: 1.3rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.16);
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(255, 255, 255, 0.01)),
+    #050505;
+}
+
+.panel-header {
+  padding-bottom: 1.1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+}
+
+.panel-header h1 {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  letter-spacing: 0.02em;
+}
+
+.panel-header p {
+  margin-top: 0.7rem;
+  color: #bababa;
+  line-height: 1.6;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.9rem;
+}
+
+.panel-section h2 {
+  margin: 0 0 0.75rem;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #dedede;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.input-selector {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.55rem;
+}
+
+.input-selector button {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 11px;
+  background: #101010;
+  color: #dfdfdf;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 0.72rem;
+  cursor: pointer;
+  transition: border-color 180ms ease, transform 180ms ease, background 180ms ease;
+}
+
+.input-selector button.active {
+  background: #fff;
+  color: #050505;
+  border-color: #fff;
+}
+
+.input-selector button:hover {
+  transform: translateY(-1px);
+  border-color: #fff;
+}
+
+.text-input {
+  width: 100%;
+  min-height: 165px;
+  resize: vertical;
+  padding: 0.8rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: #101010;
+  color: #fff;
+  outline: none;
+}
+
+.text-input::placeholder {
+  color: #848484;
+}
+
+.text-input:focus {
+  border-color: #fff;
+}
+
+.file-upload-wrapper input[type="file"] {
+  display: none;
+}
+
+.file-upload-label {
+  min-height: 110px;
+  border: 1px dashed rgba(255, 255, 255, 0.38);
+  border-radius: 12px;
+  background: #0f0f0f;
+  color: #e8e8e8;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0.8rem;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease;
+}
+
+.file-upload-label:hover {
+  border-color: #fff;
+  background: #171717;
+}
+
+.error-message {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: #171717;
+  border-radius: 10px;
+  color: #efefef;
+  padding: 0.72rem;
+  font-size: 0.88rem;
+}
+
+.panel-footer {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.generate-button {
+  width: 100%;
+  border: 1px solid #fff;
+  background: #fff;
+  color: #050505;
+  border-radius: 12px;
+  padding: 0.82rem 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.generate-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+}
+
+.generate-button:disabled {
+  cursor: not-allowed;
+  background: #888;
+  border-color: #888;
+  color: #181818;
+  transform: none;
+  box-shadow: none;
+}
+
+.download-button {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: transparent;
+  color: #efefef;
+  border-radius: 12px;
+  padding: 0.72rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: border-color 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.download-button:hover:not(:disabled) {
+  border-color: #fff;
+  background: #1a1a1a;
+}
+
+.download-button:disabled {
+  color: #777;
+  border-color: #444;
+  cursor: not-allowed;
+}
+
+.mindmap-canvas {
+  flex: 1;
+  min-width: 0;
+  background:
+    radial-gradient(circle at top right, rgba(255, 255, 255, 0.07), transparent 35%),
+    radial-gradient(circle at 20% 85%, rgba(255, 255, 255, 0.05), transparent 25%),
+    #090909;
+}
+
+.react-flow__controls {
+  box-shadow: none;
+  border: 1px solid rgba(255, 255, 255, 0.24);
+}
+
+.react-flow__controls-button {
+  background: #111;
+  color: #fff;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.react-flow__controls-button:hover {
+  background: #181818;
+}
+
+.react-flow__edge-path {
+  stroke: #8c8c8c;
+  stroke-width: 2.3;
+}
+
+@media (max-width: 950px) {
+  .mindmap-app-layout {
+    flex-direction: column;
+  }
+
+  .control-panel {
+    width: 100%;
+    max-height: 46vh;
+    border-right: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+}

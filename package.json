@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^7.0.0",
+    "@xyflow/react": "^12.8.4",
+    "d3": "^7.9.0",
+    "dagre": "^0.8.5",
+    "pdfjs-dist": "^5.4.54",
+    "react-flow-renderer": "^10.3.17"
+  }
+}

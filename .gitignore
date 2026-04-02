@@ -1,0 +1,64 @@
+# Dependencies
+node_modules/
+client/node_modules/
+server/node_modules/
+ml-api/*/node_modules/
+
+# Environment variables
+.env
+.env.local
+.env.*.local
+
+# Build outputs
+dist/
+build/
+client/dist/
+client/build/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+*.egg-info/
+
+# ML Model Cache
+ml-api/model3-api/hf_cache/
+
+# Large LLM model files (too big for GitHub - download separately)
+ml-api/model3-api/phi 3 mini/
+ml-api/model3-api/phi 3 mini fine tuned/
+ml-api/model3-api/phi-3-mini-merged/
+
+# PDF.js library (download from https://github.com/mozilla/pdfjs-dist/releases)
+client/public/pdfjs-5.4.54-dist/
+
+# Package lock files (optional - uncomment if needed)
+# package-lock.json
+# client/package-lock.json
+# server/package-lock.json
+# .pkl files are intentionally tracked (small model files needed for deployment)
+# ml-api/model1-api/*.pkl
+# ml-api/model2-api/*.pkl
+
+# Very large files (>100MB)
+*.safetensors

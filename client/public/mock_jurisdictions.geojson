@@ -1,0 +1,46 @@
+
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "name": "Begambur" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.980, 10.365], [77.990, 10.365], [77.990, 10.375], [77.980, 10.375], [77.980, 10.365]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Palani" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.515, 10.445], [77.525, 10.445], [77.525, 10.455], [77.515, 10.455], [77.515, 10.445]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Oddanchatram" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.755, 10.475], [77.765, 10.475], [77.765, 10.485], [77.755, 10.485], [77.755, 10.475]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Natham" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[78.115, 10.215], [78.125, 10.215], [78.125, 10.225], [78.115, 10.225], [78.115, 10.215]]]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "name": "Vedasandur" },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [[[77.950, 10.470], [77.960, 10.470], [77.960, 10.480], [77.950, 10.480], [77.950, 10.470]]]
+      }
+    }
+  ]
+}

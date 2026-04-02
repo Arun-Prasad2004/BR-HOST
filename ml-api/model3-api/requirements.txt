@@ -1,0 +1,13 @@
+pypdf
+uvicorn
+fastapi
+python-multipart
+pillow
+pytesseract
+pdf2image
+requests
+python-dotenv
+
+# Notes:
+# - pytesseract requires the Tesseract OCR binary installed on the system (https://github.com/tesseract-ocr/tesseract).
+# - pdf2image requires poppler (install poppler binaries for your OS). See pdf2image docs.

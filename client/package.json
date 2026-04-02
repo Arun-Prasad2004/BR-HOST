@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build --force && echo Vite Cache Bypassed",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "react-scripts test",

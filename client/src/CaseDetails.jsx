@@ -16,7 +16,7 @@ const CaseDetails = () => {
   useEffect(() => {
     const fetchCaseDetails = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/cases/${caseId}`, {
+        const response = await fetch(`https://br-host.onrender.com/cases/${caseId}`, {
           method: "GET",
           headers: { "x-api-key": API_KEY },
         });
@@ -36,7 +36,7 @@ const CaseDetails = () => {
 
     const checkAssessmentExists = async () => {
       try {
-        const response = await fetch(`http://localhost:5000/bail-assessment/check/${caseId}`, {
+        const response = await fetch(`https://br-host.onrender.com/bail-assessment/check/${caseId}`, {
           method: "GET",
           headers: { "x-api-key": API_KEY },
         });

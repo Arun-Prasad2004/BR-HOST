@@ -20,7 +20,7 @@ const CaseDetails = () => {
       setLoading(true);
 
       try {
-        const response = await fetch(`http://localhost:5000/cases/${caseId}`, {
+        const response = await fetch(`https://br-host.onrender.com/cases/${caseId}`, {
           method: "GET",
           headers: { "x-api-key": "mysecureapikey123" },
         });
@@ -71,7 +71,7 @@ const CaseDetails = () => {
     };
 
     try {
-      const response = await fetch(`http://localhost:5000/cases/${caseId}`, {
+      const response = await fetch(`https://br-host.onrender.com/cases/${caseId}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -120,7 +120,7 @@ const CaseDetails = () => {
     }
 
     try {
-      const response = await fetch("http://localhost:5002/predict", {
+      const response = await fetch("https://br-host-ml-1.onrender.com/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ case_number: caseDetails.case_number }),

@@ -29,7 +29,7 @@ function App() {
 
   useEffect(() => {
     // Checking the MongoDB connection status
-    fetch("http://localhost:5000/status", {
+    fetch("https://br-host.onrender.com/status", {
       method: "GET",
       headers: {
         "x-api-key": API_KEY,

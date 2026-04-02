@@ -18,7 +18,7 @@ const LawyerLogin = () => {
     if (lawyerId && lawyerId === password) {
       // If they match, proceed to fetch lawyer data from the backend.
       try {
-        const response = await fetch(`http://localhost:5000/lawyers/${lawyerId}`, {
+        const response = await fetch(`https://br-host.onrender.com/lawyers/${lawyerId}`, {
           method: "GET", // Reverted to GET as password is not sent
           headers: { "x-api-key": "mysecureapikey123" }, 
         });

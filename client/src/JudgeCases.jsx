@@ -17,7 +17,7 @@ const JudgeCases = () => {
         try {
           const caseData = await Promise.all(
             judge.cases_assigned.map((caseId) =>
-              fetch(`http://localhost:5000/cases/${caseId}`, {
+              fetch(`https://br-host.onrender.com/cases/${caseId}`, {
                 method: "GET",
                 headers: {
                   "x-api-key": "mysecureapikey123",

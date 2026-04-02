@@ -54,7 +54,7 @@ const MCQ = () => {
     const assessmentArray = questions.map((q) => responses[q.id]);
 
     try {
-      const response = await fetch("http://localhost:5000/bail-assessment", {
+      const response = await fetch("https://br-host.onrender.com/bail-assessment", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -83,7 +83,7 @@ const MCQ = () => {
   useEffect(() => {
     const checkAssessment = async () => {
       try {
-        const res = await fetch(`http://localhost:5000/check-bail-assessment/${caseId}`, {
+        const res = await fetch(`https://br-host.onrender.com/check-bail-assessment/${caseId}`, {
           headers: { "x-api-key": "mysecureapikey123" },
         });
         const result = await res.json();

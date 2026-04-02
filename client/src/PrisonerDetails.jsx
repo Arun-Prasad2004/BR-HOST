@@ -17,7 +17,7 @@ const PrisonerDetails = () => {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch("http://localhost:5001/predict", {
+      const response = await fetch("https://br-host-ml-2.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

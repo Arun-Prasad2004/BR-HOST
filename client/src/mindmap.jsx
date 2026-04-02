@@ -314,7 +314,7 @@ export default function MindMap() {
       let response;
       if (inputType === "text") {
         if (!textInput) throw new Error("Please enter some text.");
-        response = await fetch("http://127.0.0.1:8000/generate-text", {
+        response = await fetch("https://br-host-ml-3.onrender.com/generate-text", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ instruction, input_text: textInput }),
@@ -324,7 +324,7 @@ export default function MindMap() {
         const formData = new FormData();
         formData.append("file", file);
         formData.append("instruction", instruction);
-        response = await fetch("http://127.0.0.1:8000/generate-from-file", {
+        response = await fetch("https://br-host-ml-3.onrender.com/generate-from-file", {
           method: "POST",
           body: formData,
         });

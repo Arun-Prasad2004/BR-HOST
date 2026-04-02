@@ -13,7 +13,7 @@ const PrisonerLogin = () => {
     setError(""); // Clear previous errors
 
     try {
-      const response = await fetch(`http://localhost:5000/Prisoner/${prisonerId}`, {
+      const response = await fetch(`https://br-host.onrender.com/Prisoner/${prisonerId}`, {
         method: "GET",
         headers: { "x-api-key": "mysecureapikey123" }, 
       });

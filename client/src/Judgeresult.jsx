@@ -11,7 +11,7 @@ const BailResult = () => {
   useEffect(() => {
     const fetchBailResult = async () => {
       try {
-        const response = await fetch(`http://localhost:5002/predict`, {
+        const response = await fetch(`https://br-host-ml-1.onrender.com/predict`, {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ case_number: caseId }),

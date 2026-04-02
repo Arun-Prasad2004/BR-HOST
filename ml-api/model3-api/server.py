@@ -316,5 +316,7 @@ async def generate_from_file(instruction: str = Form(...), file: UploadFile = Fi
 
 # ------------------------
 # To run the server: uvicorn server:app --reload
+import os
 if __name__ == "__main__":
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    port = int(os.environ.get("PORT", 8000))
+    uvicorn.run(app, host="0.0.0.0", port=port)

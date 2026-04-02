@@ -305,10 +305,15 @@ export default function MindMap() {
   Every single line must be formatted precisely as:
   Short Title: Detailed full explanation
   
+  IMPORTANT: NEVER use generic labels like "Action 1", "Suspect 1", or "Point 1" for the Short Title. 
+  The Short Title MUST be a descriptive 2-4 word summary of the content.
+  - For actions, use action verbs (e.g., "Review CCTV Footage: Check casino cameras")
+  - For suspects, use their name (e.g., "John Malone: Verify alibi timeline")
+  
   Example:
   Lead Theory: The suspect orchestrated a break-in to cover up embezzlement.
-    Suspect 1 (John): Cannot account for his whereabouts during the time of the robbery.
-      Motive: Facing bankruptcy due to gambling debts.
+    John Malone: Cannot account for his whereabouts during the time of the robbery.
+      Gambling Debts: Facing bankruptcy and needed immediate cash flow.
 
   Mandatory sections to include:
   Lead Theory

@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build --force && echo Vite Cache Bypassed",
+    "build": "rm -rf node_modules/.vite && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "react-scripts test",

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./PoliceLogin.css";
-import police from "./assets/Police.png";
+import police from "./assets/police.png";
 
 const PoliceLogin = () => {
     const [username, setUsername] = useState("");

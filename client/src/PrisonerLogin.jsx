@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom"; 
-import prisoner from "./assets/Prisoner.png";
+import prisoner from "./assets/prisoner.png";
 import "./PrisonerLogin.css";
 
 const PrisonerLogin = () => {

@@ -63,7 +63,18 @@ const getLayoutedElements = (lines) => {
     const trimmed = line.trim();
     if (!trimmed) return; // Skip empty lines
     const id = `node-${index}`;
-    const label = trimmed.replace(/[\*#`]/g, "").replace(/^-/, "").trim();
+    
+    const labelFull = trimmed.replace(/[\*#`]/g, "").replace(/^-/, "").trim();
+    
+    // Extract short neat labels for the UI while keeping the flow intact
+    let label = labelFull;
+    const colonIndex = labelFull.indexOf(":");
+    if (colonIndex !== -1 && colonIndex < 40) {
+      label = labelFull.substring(0, colonIndex).trim();
+    } else if (labelFull.length > 50) {
+      label = labelFull.substring(0, 47) + "...";
+    }
+
     const indentation = line.search(/\S|$/);
     const newNode = { id, label, indentation, children: [] };
     while (stack.length && stack[stack.length - 1].indentation >= indentation) {
@@ -288,9 +299,18 @@ export default function MindMap() {
     setEdges([]);
     const instruction = `
   Act as a police investigation officer trying to crack the case.
-  Do not summarize; produce an actionable strategy map.
+  Produce an actionable strategy map in plain indented text.
 
-  Mandatory sections:
+  CRITICAL FORMATTING RULE: 
+  Every single line must be formatted precisely as:
+  Short Title: Detailed full explanation
+  
+  Example:
+  Lead Theory: The suspect orchestrated a break-in to cover up embezzlement.
+    Suspect 1 (John): Cannot account for his whereabouts during the time of the robbery.
+      Motive: Facing bankruptcy due to gambling debts.
+
+  Mandatory sections to include:
   Lead Theory
   Suspect Ranking (top 3)
   Breakthrough Evidence Path
@@ -298,16 +318,6 @@ export default function MindMap() {
   Likely IPC Mapping
   Final Primary Suspect
 
-  For each suspect include:
-  Motive
-  Opportunity
-  Capability
-  Verification clue
-
-  Rules:
-  Use plain indented text only.
-  Every line must be actionable or evidentiary.
-  Avoid generic SOP or textbook statements.
   End with one strongest suspect and why.
   `; 
     try {

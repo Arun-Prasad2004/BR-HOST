@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
-import "./JudgeCases.css";
+import "./Judgecases.css";
 
 const JudgeCases = () => {
   const { state } = useLocation();
